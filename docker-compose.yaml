@@ -8,10 +8,8 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
     
   node-docker-app:
-    build: 
-      context: .
-      args:
-        - NODE_ENV=development
+    build: .
+    image: 40781998/node-express-nginx-docker-app:v1
     #ports:
     #  - "5000:5000"
     environment:
